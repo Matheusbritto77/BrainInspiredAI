@@ -1,0 +1,14 @@
+# Banco de dados para memória de longo prazo
+import sqlite3
+
+def store_long_term_memory(memory_data):
+    conn = sqlite3.connect('memory.db')
+    cursor = conn.cursor()
+    cursor.execute("CREATE TABLE IF NOT EXISTS memories (data TEXT)")
+    cursor.execute("INSERT INTO memories (data) VALUES (?)", (memory_data,))
+    conn.commit()
+    print(f"Memória armazenada no banco de dados: {memory_data}")
+    conn.close()
+
+if __name__ == '__main__':
+    store_long_term_memory('Memória armazenada permanentemente')
