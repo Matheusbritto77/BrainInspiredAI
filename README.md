@@ -66,7 +66,7 @@ Este projeto é licenciado sob a MIT License, permitindo a modificação, uso e 
 A estrutura do código é organizada da seguinte forma, cada diretório e módulo reflete uma parte específica da simulação do cérebro:
 
 
-(```) 
+```
 
 ├── /CoreModules
 │   ├── CortexPreFrontal
@@ -105,7 +105,7 @@ A estrutura do código é organizada da seguinte forma, cada diretório e módul
 │
 └── main.py                             # Arquivo principal para inicializar o chatbot
 
-(```) 
+```
 
 🚀 O Futuro do BrainInspiredAI
 O projeto tem como objetivo crescer constantemente, incorporando novas pesquisas sobre IA, aprendizado de máquina e neurociência. A colaboração da comunidade é fundamental para o sucesso deste projeto, e estamos empolgados em ver como ele pode evoluir.
