@@ -70,40 +70,218 @@ A estrutura do código é organizada da seguinte forma, cada diretório e módul
 
 ├── /CoreModules
 │   ├── CortexPreFrontal
-│   │   ├── DecisionMaking.py           # Cálculos lógicos e decisões baseadas em contexto
-│   │   ├── PlanningStrategies.py       # Algoritmos de planejamento
-│   │   └── RiskAssessment.py           # Avaliação de riscos
+│   │   ├── DecisionMaking.py           # Decisões lógicas e cálculos baseados em contexto
+│   │   ├── PlanningStrategies.py       # Algoritmos de planejamento com frameworks como NLTK, SpaCy
+│   │   └── RiskAssessment.py           # Avaliação de riscos e consequências
 │   │
 │   ├── Hippocampus
-│   │   ├── MemoryFormation.py          # Armazenamento e formação de memórias
-│   │   ├── LongTermStorage.py          # Banco de dados para memórias duradouras
-│   │   └── MemoryRetrieval.py          # Recuperação de memórias
+│   │   ├── MemoryFormation.py          # Identificação e armazenamento de padrões
+│   │   ├── LongTermStorage.py          # Framework SQLite para memórias longas (ex: GPT-2 fine-tuning)
+│   │   └── MemoryRetrieval.py          # Recuperação com base em contexto usando índices
 │   │
 │   ├── Amygdala
-│   │   ├── EmotionalValues.py          # Processamento de emoções
-│   │   ├── PositiveReinforcement.py    # Reforço positivo
-│   │   └── NegativeReinforcement.py    # Reforço negativo
+│   │   ├── EmotionalValues.py          # Análise emocional (com TextBlob ou transformers)
+│   │   ├── PositiveReinforcement.py    # Reforço positivo para decisões corretas
+│   │   └── NegativeReinforcement.py    # Reforço negativo para evitar ações indesejadas
 │   │
 │   ├── Cerebellum
-│   │   ├── MotorSkillLearning.py       # Aprendizado motor
-│   │   ├── TaskOptimization.py         # Otimização de tarefas
-│   │   └── PrecisionAdjustment.py      # Ajuste de precisão
+│   │   ├── MotorSkillLearning.py       # Ajustes de resposta (transformações de dados)
+│   │   ├── TaskOptimization.py         # Otimização com base em aprendizado profundo
+│   │   └── PrecisionAdjustment.py      # Ajustes de precisão (backpropagation)
 │   │
-│   └── Synapses
-│       ├── SynapseConnections.py       # Conexões neurais entre módulos
-│       └── NeuralPlasticity.py         # Ajustes dinâmicos nas conexões
+│   ├── Memory
+│   │   ├── ShortTermMemory.py          # Cache temporário para interações imediatas
+│   │   ├── LongTermMemory.py           # Memória com banco de dados para dados persistentes
+│   │   └── Reconsolidation.py          # Atualização de dados na memória persistente
+│   │
+│   ├── Synapses
+│   │   ├── SynapseConnections.py       # Redes de conexões entre módulos (PyTorch)
+│   │   └── NeuralPlasticity.py         # Ajuste dinâmico de pesos sinápticos
+│   │
+│   └── InhibitoryControl
+│       ├── SignalFilter.py             # Filtragem de sinais irrelevantes com filtros personalizados
+│       └── FocusRegulation.py          # Manutenção de foco com base em controle inibitório
 │
 ├── /LearningProcesses
-│   ├── AssociativeLearning.py          # Aprendizado associativo
-│   ├── ObservationalLearning.py        # Aprendizado por observação
-│   ├── ErrorBasedLearning.py           # Aprendizado baseado em erros
-│   ├── DopamineSystem.py               # Sistema de recompensa
+│   ├── AssociativeLearning.py          # Aprendizado associativo com PyTorch ou TensorFlow
+│   ├── ObservationalLearning.py        # Imitação e aprendizado de observação
+│   ├── ErrorBasedLearning.py           # Feedback negativo para melhorar a precisão
+│   ├── MemorizationConsolidation.py    # Consolidação de dados na memória de longo prazo
+│   └── DopamineSystem.py               # Sistema de recompensa e motivação
+│
+├── /Microcircuits
+│   ├── CortexMicrocircuits
+│   │   ├── ContextProcessing.py        # Processamento de contexto com dados recentes
+│   │   ├── PatternRecognition.py       # Reconhecimento de padrões
+│   │   └── ResponseSelection.py        # Seleção da melhor resposta baseada em contexto
+│   │
+│   └── HippocampusMicrocircuits
+│       ├── EventSegmentation.py        # Segmentação e priorização de eventos
+│       └── Prioritization.py           # Priorização de memórias significativas
+│
+├── /OscillationsAndRhythms
+│   ├── RhythmGenerator.py              # Gerador de ritmo para melhorar interatividade
+│   ├── AlphaRhythms.py                 # Ritmo alfa para foco e relaxamento
+│   ├── BetaRhythms.py                  # Processamento ativo e alerta
+│   ├── GammaRhythms.py                 # Foco intenso e aprendizado
+│   └── RhythmControl.py                # Controle dos ritmos de processamento
+│
+├── /Synchronization
+│   ├── RegionSynchronization.py        # Sincronização entre módulos
+│   ├── LearningSync.py                 # Sincronização de aprendizado curto e longo prazo
+│   └── TaskCoordination.py             # Coordenação de tarefas complexas entre módulos
+│
+├── /SleepCycle
+│   ├── SleepMode.py                    # Modo sono para consolidação de dados e otimização
+│   ├── SynapseOptimization.py          # Ajustes de sinapses para eficiência
+│   └── MemoryConsolidationDuringSleep.py  # Consolidação de dados durante o sono
+│
+├── /SelfAwarenessAndIdentity           # Módulos para simulação de autoconsciência e identidade
+│   ├── SelfMonitoring.py               # Monitoramento interno para avaliar estados do sistema
+│   ├── IdentityProfile.py              # Gerenciamento de identidade e personalidade do chatbot
+│   ├── SelfReflection.py               # Reflexão sobre desempenho e ajuste de respostas
+│   ├── MoodRegulation.py               # Ajuste de "humor" com base nas interações
+│   └── SelfNarrative.py                # Criação de narrativa contínua para consistência de identidade
 │
 ├── /Database
-│   ├── LongTermMemoryStorage.db        # Banco de dados de memória
-│   └── SynapseWeights.db               # Armazenamento dos pesos sinápticos
+│   ├── LongTermMemoryStorage.db        # Banco de dados para memória de longo prazo
+│   └── SynapseWeights.db               # Armazenamento dos pesos das sinapses
 │
-└── main.py                             # Arquivo principal para inicializar o chatbot
+├── /Utils
+│   ├── DataPreprocessing.py            # Limpeza e transformação de dados antes do uso
+│   ├── Config.py                       # Configurações globais
+│   └── Logger.py                       # Módulo de log e monitoramento de ações
+│
+├── /SensoryInput
+│   ├── VisualProcessing.py             # Processamento visual (visão computacional)
+│   ├── AudioProcessing.py              # Processamento de áudio (ex: SpeechRecognition)
+│   ├── TouchProcessing.py              # Processamento de dados de toque
+│   └── EnvironmentalSensors.py         # Sensores ambientais
+│
+├── /Communication
+│   ├── SpeechRecognition.py            # Entrada de voz
+│   ├── TextToSpeech.py                 # Conversão de texto para fala
+│   ├── FacialEmotionRecognition.py     # Análise de emoções faciais
+│   └── GestureRecognition.py           # Reconhecimento de gestos
+│
+├── /DevelopmentStages
+│   ├── InfantLearning.py               # Aprendizado inicial
+│   ├── ChildhoodLearning.py            # Aprendizado por associação e feedback
+│   └── AdultLearning.py                # Aprendizado avançado e abstrato
+│
+├── /MultimodalLearning
+│   ├── VisualAndTextLearning.py        # Processamento conjunto de texto e imagem
+│   ├── AudioAndTextLearning.py         # Processamento conjunto de áudio e texto
+│   └── VideoAndEmotionLearning.py      # Aprendizado com vídeos e reconhecimento de emoções
+│
+└── main.py                             # Arquivo principal para inicializar e coordenar o chatbot
+├── /CoreModules
+│   ├── CortexPreFrontal
+│   │   ├── DecisionMaking.py           # Decisões lógicas e cálculos baseados em contexto
+│   │   ├── PlanningStrategies.py       # Algoritmos de planejamento com frameworks como NLTK, SpaCy
+│   │   └── RiskAssessment.py           # Avaliação de riscos e consequências
+│   │
+│   ├── Hippocampus
+│   │   ├── MemoryFormation.py          # Identificação e armazenamento de padrões
+│   │   ├── LongTermStorage.py          # Framework SQLite para memórias longas (ex: GPT-2 fine-tuning)
+│   │   └── MemoryRetrieval.py          # Recuperação com base em contexto usando índices
+│   │
+│   ├── Amygdala
+│   │   ├── EmotionalValues.py          # Análise emocional (com TextBlob ou transformers)
+│   │   ├── PositiveReinforcement.py    # Reforço positivo para decisões corretas
+│   │   └── NegativeReinforcement.py    # Reforço negativo para evitar ações indesejadas
+│   │
+│   ├── Cerebellum
+│   │   ├── MotorSkillLearning.py       # Ajustes de resposta (transformações de dados)
+│   │   ├── TaskOptimization.py         # Otimização com base em aprendizado profundo
+│   │   └── PrecisionAdjustment.py      # Ajustes de precisão (backpropagation)
+│   │
+│   ├── Memory
+│   │   ├── ShortTermMemory.py          # Cache temporário para interações imediatas
+│   │   ├── LongTermMemory.py           # Memória com banco de dados para dados persistentes
+│   │   └── Reconsolidation.py          # Atualização de dados na memória persistente
+│   │
+│   ├── Synapses
+│   │   ├── SynapseConnections.py       # Redes de conexões entre módulos (PyTorch)
+│   │   └── NeuralPlasticity.py         # Ajuste dinâmico de pesos sinápticos
+│   │
+│   └── InhibitoryControl
+│       ├── SignalFilter.py             # Filtragem de sinais irrelevantes com filtros personalizados
+│       └── FocusRegulation.py          # Manutenção de foco com base em controle inibitório
+│
+├── /LearningProcesses
+│   ├── AssociativeLearning.py          # Aprendizado associativo com PyTorch ou TensorFlow
+│   ├── ObservationalLearning.py        # Imitação e aprendizado de observação
+│   ├── ErrorBasedLearning.py           # Feedback negativo para melhorar a precisão
+│   ├── MemorizationConsolidation.py    # Consolidação de dados na memória de longo prazo
+│   └── DopamineSystem.py               # Sistema de recompensa e motivação
+│
+├── /Microcircuits
+│   ├── CortexMicrocircuits
+│   │   ├── ContextProcessing.py        # Processamento de contexto com dados recentes
+│   │   ├── PatternRecognition.py       # Reconhecimento de padrões
+│   │   └── ResponseSelection.py        # Seleção da melhor resposta baseada em contexto
+│   │
+│   └── HippocampusMicrocircuits
+│       ├── EventSegmentation.py        # Segmentação e priorização de eventos
+│       └── Prioritization.py           # Priorização de memórias significativas
+│
+├── /OscillationsAndRhythms
+│   ├── RhythmGenerator.py              # Gerador de ritmo para melhorar interatividade
+│   ├── AlphaRhythms.py                 # Ritmo alfa para foco e relaxamento
+│   ├── BetaRhythms.py                  # Processamento ativo e alerta
+│   ├── GammaRhythms.py                 # Foco intenso e aprendizado
+│   └── RhythmControl.py                # Controle dos ritmos de processamento
+│
+├── /Synchronization
+│   ├── RegionSynchronization.py        # Sincronização entre módulos
+│   ├── LearningSync.py                 # Sincronização de aprendizado curto e longo prazo
+│   └── TaskCoordination.py             # Coordenação de tarefas complexas entre módulos
+│
+├── /SleepCycle
+│   ├── SleepMode.py                    # Modo sono para consolidação de dados e otimização
+│   ├── SynapseOptimization.py          # Ajustes de sinapses para eficiência
+│   └── MemoryConsolidationDuringSleep.py  # Consolidação de dados durante o sono
+│
+├── /SelfAwarenessAndIdentity           # Módulos para simulação de autoconsciência e identidade
+│   ├── SelfMonitoring.py               # Monitoramento interno para avaliar estados do sistema
+│   ├── IdentityProfile.py              # Gerenciamento de identidade e personalidade do chatbot
+│   ├── SelfReflection.py               # Reflexão sobre desempenho e ajuste de respostas
+│   ├── MoodRegulation.py               # Ajuste de "humor" com base nas interações
+│   └── SelfNarrative.py                # Criação de narrativa contínua para consistência de identidade
+│
+├── /Database
+│   ├── LongTermMemoryStorage.db        # Banco de dados para memória de longo prazo
+│   └── SynapseWeights.db               # Armazenamento dos pesos das sinapses
+│
+├── /Utils
+│   ├── DataPreprocessing.py            # Limpeza e transformação de dados antes do uso
+│   ├── Config.py                       # Configurações globais
+│   └── Logger.py                       # Módulo de log e monitoramento de ações
+│
+├── /SensoryInput
+│   ├── VisualProcessing.py             # Processamento visual (visão computacional)
+│   ├── AudioProcessing.py              # Processamento de áudio (ex: SpeechRecognition)
+│   ├── TouchProcessing.py              # Processamento de dados de toque
+│   └── EnvironmentalSensors.py         # Sensores ambientais
+│
+├── /Communication
+│   ├── SpeechRecognition.py            # Entrada de voz
+│   ├── TextToSpeech.py                 # Conversão de texto para fala
+│   ├── FacialEmotionRecognition.py     # Análise de emoções faciais
+│   └── GestureRecognition.py           # Reconhecimento de gestos
+│
+├── /DevelopmentStages
+│   ├── InfantLearning.py               # Aprendizado inicial
+│   ├── ChildhoodLearning.py            # Aprendizado por associação e feedback
+│   └── AdultLearning.py                # Aprendizado avançado e abstrato
+│
+├── /MultimodalLearning
+│   ├── VisualAndTextLearning.py        # Processamento conjunto de texto e imagem
+│   ├── AudioAndTextLearning.py         # Processamento conjunto de áudio e texto
+│   └── VideoAndEmotionLearning.py      # Aprendizado com vídeos e reconhecimento de emoções
+│
+└── main.py                             # Arquivo principal para inicializar e coordenar o chatbot
 
 ```
 
